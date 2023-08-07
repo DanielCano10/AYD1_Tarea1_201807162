@@ -10,6 +10,15 @@ app.post('/sum', (req, res) => {
   res.json({ result });
 });
 
+app.get('/info', (req, res) => {
+    const carnetInfo = {
+      carnet: '201807162',
+      message: 'Información del carnet'
+    };
+    res.json(carnetInfo);
+  });
+  
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
